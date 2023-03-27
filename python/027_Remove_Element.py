@@ -37,5 +37,5 @@ class Solution(object):
 if __name__ == '__main__':
     # begin
     s = Solution()
-    print s.removeElement([1], 1)
+    print(s.removeElement([1], 1))
 

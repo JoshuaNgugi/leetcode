@@ -48,6 +48,6 @@ class Solution(object):
 if __name__ == '__main__':
     # begin
     s = Solution()
-    print s.convert("PAYPALISHIRING", 3)
+    print(s.convert("PAYPALISHIRING", 3))
 
 

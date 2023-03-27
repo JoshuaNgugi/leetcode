@@ -42,7 +42,7 @@ class Solution(object):
 if __name__ == '__main__':
     s = Solution()
     # print s.longestValidParentheses(")(((((()())()()))()(()))(")
-    print s.findSubstring('wordgoodgoodgoodbestword', ["word", "good", "best", "good"])
+    print(s.findSubstring('wordgoodgoodgoodbestword', ["word", "good", "best", "good"]))
 
     # [6,9,12]
 

@@ -45,7 +45,7 @@ class Solution(object):
 
 if __name__ == '__main__':
     s = Solution()
-    print s.combinationSum([8,7,4,3], 11)
+    print(s.combinationSum([8,7,4,3], 11))
 
 
 

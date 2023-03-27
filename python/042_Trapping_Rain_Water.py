@@ -71,6 +71,6 @@ class Solution(object):
 if __name__ == '__main__':
     # begin
     s = Solution()
-    print s.trap([2,6,3,8,2,7,2,5,0])
+    print(s.trap([2,6,3,8,2,7,2,5,0]))
 
 

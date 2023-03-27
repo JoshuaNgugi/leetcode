@@ -57,4 +57,4 @@ class Solution(object):
 if __name__ == '__main__':
     # begin
     s = Solution()
-    print s.findMedianSortedArrays([1, 1], [1, 2])
+    print(s.findMedianSortedArrays([1, 1], [1, 2]))

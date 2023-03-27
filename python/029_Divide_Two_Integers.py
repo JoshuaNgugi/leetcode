@@ -8,6 +8,7 @@
 
 import math
 
+
 class Solution(object):
     def divide(self, dividend, divisor):
         if divisor == 0:
@@ -38,8 +39,7 @@ class Solution(object):
     #         return min(result, 2147483647)
     #     return max(-result, -2147483648)
 
+
 if __name__ == '__main__':
     s = Solution()
-    print s.divide(1, 1)
-
-
+    print(s.divide(1, 1))

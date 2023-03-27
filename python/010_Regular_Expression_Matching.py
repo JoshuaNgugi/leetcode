@@ -31,6 +31,6 @@ class Solution(object):
 if __name__ == '__main__':
     # begin
     s = Solution()
-    print s.isMatch("", ".*")
+    print(s.isMatch("", ".*"))
 
 

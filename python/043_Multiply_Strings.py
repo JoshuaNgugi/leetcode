@@ -76,4 +76,4 @@ class Solution(object):
 
 if __name__ == '__main__':
     s = Solution()
-    print s.multiply("98", "9")
+    print(s.multiply("98", "9"))
