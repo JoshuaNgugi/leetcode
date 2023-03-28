@@ -123,5 +123,5 @@ class Solution(object):
 
 if __name__ == '__main__':
     s = Solution()
-    print s.minWindow('a', 'a')
+    print(s.minWindow('a', 'a'))
 

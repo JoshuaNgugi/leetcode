@@ -19,4 +19,4 @@ class Solution(object):
 if __name__ == '__main__':
     # begin
     s = Solution()
-    print s.generateMatrix(2)
+    print(s.generateMatrix(2))

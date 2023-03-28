@@ -70,4 +70,4 @@ class Solution(object):
 
 if __name__ == '__main__':
     s = Solution()
-    print s.fullJustify(["Don't","go","around","saying","the","world","owes","you","a","living;","the","world","owes","you","nothing;","it","was","here","first."],30)
+    print(s.fullJustify(["Don't","go","around","saying","the","world","owes","you","a","living;","the","world","owes","you","nothing;","it","was","here","first."],30))
