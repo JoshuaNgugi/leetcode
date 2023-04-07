@@ -67,5 +67,5 @@ class Solution(object):
 if __name__ == '__main__':
     s = Solution()
     # print s.longestValidParentheses(")(((((()())()()))()(()))(")
-    print s.restoreIpAddresses('25525511135')
+    print(s.restoreIpAddresses('25525511135'))
 

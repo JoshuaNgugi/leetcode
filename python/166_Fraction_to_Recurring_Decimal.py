@@ -32,4 +32,4 @@ class Solution(object):
 if __name__ == '__main__':
     s = Solution()
     # print s.longestValidParentheses(")(((((()())()()))()(()))(")
-    print s.fractionToDecimal(-50, 8)
+    print(s.fractionToDecimal(-50, 8))

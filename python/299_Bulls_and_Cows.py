@@ -31,4 +31,4 @@ class Solution(object):
 
 if __name__ == "__main__":
     s = Solution()
-    print s.getHint("1122", "1222")
+    print(s.getHint("1122", "1222"))

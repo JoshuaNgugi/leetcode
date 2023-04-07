@@ -13,6 +13,6 @@ class Solution(object):
 
 if __name__ == '__main__':
     s = Solution()
-    print s.repeatedNTimes([1, 2, 3, 3])
-    print s.repeatedNTimes([2, 1, 2, 5, 3, 2])
-    print s.repeatedNTimes([5, 1, 5, 2, 5, 3, 5, 4])
+    print(s.repeatedNTimes([1, 2, 3, 3]))
+    print(s.repeatedNTimes([2, 1, 2, 5, 3, 2]))
+    print(s.repeatedNTimes([5, 1, 5, 2, 5, 3, 5, 4]))

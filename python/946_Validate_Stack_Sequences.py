@@ -31,4 +31,4 @@ if __name__ == '__main__':
     s = Solution()
     # print s.validateStackSequences([1, 2, 3, 4, 5], [4, 5, 3, 2, 1])
     # print s.validateStackSequences([2, 1, 0], [1, 2, 0])
-    print s.validateStackSequences([1, 0, 3, 2], [0, 1, 2, 3])
+    print(s.validateStackSequences([1, 0, 3, 2], [0, 1, 2, 3]))

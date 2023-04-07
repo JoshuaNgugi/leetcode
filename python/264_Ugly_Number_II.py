@@ -28,4 +28,4 @@ class Solution(object):
 if __name__ == '__main__':
     # begin
     s = Solution()
-    print s.nthUglyNumber(10)
+    print(s.nthUglyNumber(10))

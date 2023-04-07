@@ -27,6 +27,6 @@ class Solution(object):
 
 if __name__ == '__main__':
     s = Solution()
-    print s.isAlienSorted(["hello","leetcode"], "hlabcdefgijkmnopqrstuvwxyz")
-    print s.isAlienSorted(["word","world","row"], "worldabcefghijkmnpqstuvxyz")
-    print s.isAlienSorted(["apple","app"], "abcdefghijklmnopqrstuvwxyz")
+    print(s.isAlienSorted(["hello","leetcode"], "hlabcdefgijkmnopqrstuvwxyz"))
+    print(s.isAlienSorted(["word","world","row"], "worldabcefghijkmnpqstuvxyz"))
+    print(s.isAlienSorted(["apple","app"], "abcdefghijklmnopqrstuvwxyz"))
