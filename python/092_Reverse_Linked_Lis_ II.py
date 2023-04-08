@@ -33,8 +33,6 @@ class Solution(object):
             split_node.next = prev
         if tail is not None:
             tail.next = curr
-        if m == 1:
-            return prev
-        return head
+        return prev if m == 1 else head
 
         

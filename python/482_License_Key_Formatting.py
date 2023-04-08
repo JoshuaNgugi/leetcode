@@ -8,12 +8,9 @@ class Solution(object):
         # https://leetcode.com/problems/license-key-formatting/discuss/96497/Python-solution
         S = S.upper().replace('-', '')
         ls = len(S)
-        if ls % K == 0:
-            pos = K
-        else:
-            pos = ls % K
+        pos = K if ls % K == 0 else ls % K
         res = S[:pos]
         while pos < ls:
-            res += '-' + S[pos:pos + K]
+            res += f'-{S[pos:pos + K]}'
             pos += K
         return res

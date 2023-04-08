@@ -50,9 +50,7 @@ class Solution(object):
 
     def mergeKLists(self, lists):
         # recursive
-        if lists is None:
-            return None
-        elif len(lists) == 0:
+        if lists is None or len(lists) == 0:
             return None
         return self.mergeK(lists, 0, len(lists) - 1)
 

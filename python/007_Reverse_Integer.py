@@ -1,17 +1,15 @@
 class Solution:
     def reverse(self, x):
         # https://leetcode.com/problems/reverse-integer/
-        flag = True if x < 0 else False
+        flag = x < 0
         if flag:
             x = -x
         x = str(x)[::-1]
 
         if flag:
-            x = "-" + x
+            x = f"-{x}"
 
         value = 2 ** 31
         x = int(x)
-        if -value <= x < value:
-            return x
-        return 0
+        return x if -value <= x < value else 0
     

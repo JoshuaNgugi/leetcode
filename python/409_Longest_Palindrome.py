@@ -8,15 +8,13 @@ class Solution:
     #             ans += 1
     #     return ans
     def longestPalindrome(self, s):
-        ans = 0
         char_map = {}
         for c in s:
             char_map[c] = char_map.get(c, 0) + 1
-        for c in char_map.keys():
-            if char_map[c] % 2 == 0:
-                ans += char_map.pop(c)
-            else:
-                ans += char_map[c] / 2 * 2
-        if len(char_map) != 0:
+        ans = sum(
+            char_map.pop(c) if value % 2 == 0 else char_map[c] / 2 * 2
+            for c, value in char_map.items()
+        )
+        if char_map:
             ans += 1
         return ans

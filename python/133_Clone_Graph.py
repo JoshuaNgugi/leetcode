@@ -30,11 +30,10 @@ class Solution(object):
         # BFS
         if node is None:
             return None
-        label_map = {}
         queue = [node]
         graphCopy = UndirectedGraphNode(node.label)
-        label_map[node.label] = graphCopy
-        while len(queue) > 0:
+        label_map = {node.label: graphCopy}
+        while queue:
             curr = queue.pop(0)
             for ne in curr.neighbors:
                 if ne.label in label_map:

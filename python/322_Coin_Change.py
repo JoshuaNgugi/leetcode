@@ -43,6 +43,4 @@ class Solution(object):
                     break
                 elif i > coin:
                     dp[i] = min(dp[i], dp[i - coin] + 1)
-        if dp[amount] == 1000000000:
-            return -1
-        return dp[amount]
+        return -1 if dp[amount] == 1000000000 else dp[amount]

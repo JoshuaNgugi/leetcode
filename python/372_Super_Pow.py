@@ -19,6 +19,6 @@ class Solution(object):
     def powmod(self, a, k):
         a %= self.base
         result = 1
-        for i in range(k):
+        for _ in range(k):
             result = (result * a) % self.base
         return result

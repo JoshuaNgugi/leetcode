@@ -7,10 +7,9 @@ class Solution(object):
         leakWall = self.buildLeakWall(board)
         while leakWall:
             i, j = leakWall.pop()
-            if 0 <= i < height and 0 <= j < width:
-                if board[i][j] == "O":
-                    board[i][j] = "S"
-                    leakWall += (i - 1, j), (i + 1, j), (i, j - 1), (i, j + 1)
+            if 0 <= i < height and 0 <= j < width and board[i][j] == "O":
+                board[i][j] = "S"
+                leakWall += (i - 1, j), (i + 1, j), (i, j - 1), (i, j + 1)
         for i in range(height):
             for j in range(width):
                 board[i][j] = "O" if board[i][j] == "S" else "X"

@@ -20,7 +20,7 @@ class Solution(object):
         dic = {}
         while remainder != 0:
             if remainder in dic:
-                fraction = fraction[:dic[remainder]] + '(' + fraction[dic[remainder]:] + ')'
+                fraction = f'{fraction[:dic[remainder]]}({fraction[dic[remainder]:]})'
                 break
             dic[remainder] = len(fraction)
             remainder *= 10

@@ -10,17 +10,16 @@ class Solution(object):
         ls = len(str)
         while pos < ls and str[pos] == ' ':
             pos += 1
-        if pos < ls and str[pos] == '-':
-            sign = -1
-            pos += 1
-        elif pos < ls and str[pos] == '+':
-            pos += 1
+        if pos < ls:
+            if str[pos] == '-':
+                sign = -1
+                pos += 1
+            elif str[pos] == '+':
+                pos += 1
         while pos < ls and ord(str[pos]) >= ord('0') and ord(str[pos]) <= ord('9'):
             num = ord(str[pos]) - ord('0')
             if result > max_int / 10 or ( result == max_int / 10 and num >= 8):
-                if sign == -1:
-                    return min_int
-                return max_int
+                return min_int if sign == -1 else max_int
             result = result * 10 + num
             pos += 1
         return sign * result

@@ -43,8 +43,9 @@ class Solution(object):
     def postorderTraversal(self, root):
         if root is None:
             return []
-        res = []; stack = [root]
-        while len(stack) > 0:
+        res = []
+        stack = [root]
+        while stack:
             curr = stack.pop()
             if not isinstance(curr, TreeNode):
                 res.append(curr)

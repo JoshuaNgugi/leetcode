@@ -1,8 +1,7 @@
 class Solution:
     def checkSubarraySum(self, nums: List[int], k: int) -> bool:
         # remeainders[0] = 0 is for when x == 0
-        remainders = dict()
-        remainders[0] = 0
+        remainders = {0: 0}
         pre_sum = 0
 
         for idx, item in enumerate(nums):

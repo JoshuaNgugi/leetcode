@@ -11,9 +11,7 @@ class Solution(object):
         :type n: int
         :rtype: List[TreeNode]
         """
-        if n == 0:
-            return []
-        return self.get_trees(1, n)
+        return [] if n == 0 else self.get_trees(1, n)
 
     def get_trees(self, start, end):
         # recursive solve this problem

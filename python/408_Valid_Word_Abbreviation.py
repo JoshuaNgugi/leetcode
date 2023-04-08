@@ -50,9 +50,7 @@ class Solution(object):
                     return False
                 pos += 1
         pos += curr
-        if pos == len(word):
-            return True
-        return False
+        return pos == len(word)
 
 
         

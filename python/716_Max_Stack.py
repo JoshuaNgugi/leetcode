@@ -51,6 +51,6 @@ class MaxStack(object):
         while self.top() != val:
             buff.append(self.pop())
         self.pop()
-        while len(buff) != 0:
+        while buff:
             self.push(buff.pop(-1))
         return val

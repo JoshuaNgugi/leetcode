@@ -47,7 +47,7 @@ class Solution(object):
         if head is None:
             return None
         slow = fast = head
-        for i in range(n):
+        for _ in range(n):
             fast = fast.next
         if fast is None:
             head = head.next

@@ -104,7 +104,7 @@ class Solution(object):
             if count == ls_t:
                 begin_index = ord(s[begin])
                 while need_to_find[begin_index] == 0 or\
-                    has_found[begin_index] > need_to_find[begin_index]:
+                        has_found[begin_index] > need_to_find[begin_index]:
                     if has_found[begin_index] > need_to_find[begin_index]:
                         has_found[begin_index] -= 1
                     begin += 1
@@ -115,10 +115,7 @@ class Solution(object):
                     min_end = end
                     min_window = window_ls
         # print min_begin, min_end
-        if count == ls_t:
-            return s[min_begin: min_end + 1]
-        else:
-            return ''
+        return s[min_begin: min_end + 1] if count == ls_t else ''
 
 
 if __name__ == '__main__':
