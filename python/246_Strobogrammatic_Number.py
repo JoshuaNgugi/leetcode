@@ -11,9 +11,7 @@ class Solution(object):
             if c not in dic:
                 return False
             temp_s += dic[c]
-        if int(temp_s) == int(num):
-            return True
-        return False
+        return int(temp_s) == int(num)
 
     # def isStrobogrammatic(self, num):
     #     # https://discuss.leetcode.com/topic/20840/1-liners-python

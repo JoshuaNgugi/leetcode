@@ -6,12 +6,11 @@ class Solution(object):
         """
         dic = {}
         half = []
-        res = []
         for c in s:
             dic[c] = dic.get(c, 0) + 1
         odd, even = 0, 0
-        for c in dic:
-            if dic[c] % 2 == 0:
+        for value in dic.values():
+            if value % 2 == 0:
                 even += 1
             else:
                 odd += 1
@@ -20,15 +19,12 @@ class Solution(object):
         # generate half
         seed = []
         mid = ''
-        for c in dic:
-            if dic[c] % 2 == 1:
+        for c, value_ in dic.items():
+            if value_ % 2 == 1:
                 mid = c
             seed.extend([c] * (dic[c] / 2))
         self.permute(half, seed, 0)
-        # merge half to get res
-        for r in half:
-            res.append(''.join(r) + mid + ''.join(reversed(r)))
-        return res
+        return [''.join(r) + mid + ''.join(reversed(r)) for r in half]
 
     def permute(self, res, num, index):
         if index == len(num):

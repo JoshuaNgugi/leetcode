@@ -26,9 +26,7 @@ class Solution(object):
         posfix = self.letterCombinations(digits[1:])
         for t in dmap[current]:
             if len(posfix) > 0:
-                for p in posfix:
-                    temp = t + p
-                    result.append(temp)
+                result.extend(t + p for p in posfix)
             else:
                 result.append(t)
         return result

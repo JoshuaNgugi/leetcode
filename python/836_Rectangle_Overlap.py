@@ -5,10 +5,12 @@ class Solution(object):
         :type rec2: List[int]
         :rtype: bool
         """
-        return not (rec1[2] <= rec2[0] or  # left
-                    rec1[3] <= rec2[1] or  # bottom
-                    rec1[0] >= rec2[2] or  # right
-                    rec1[1] >= rec2[3])    # top
+        return (
+            rec1[2] > rec2[0]
+            and rec1[3] > rec2[1]
+            and rec1[0] < rec2[2]
+            and rec1[1] < rec2[3]
+        )
 
     # def isRectangleOverlap(self, rec1, rec2):
     #     def intersect(p_left, p_right, q_left, q_right):

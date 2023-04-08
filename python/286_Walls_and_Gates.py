@@ -12,12 +12,8 @@ class Solution(object):
         n = len(rooms[0])
         q = []
         for row in range(m):
-            for col in range(n):
-                # gate
-                if rooms[row][col] == 0:
-                    q.append((row, col))
-
-        while len(q) > 0:
+            q.extend((row, col) for col in range(n) if rooms[row][col] == 0)
+        while q:
             point = q.pop(0)
             row, col = point[0], point[1]
             for d in direction:

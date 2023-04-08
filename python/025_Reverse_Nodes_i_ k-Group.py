@@ -35,7 +35,7 @@ class Solution(object):
         pos = head.next
         last = end
         next_start = pos
-        while pos != end:
+        while pos != last:
             head.next = pos
             last_pos = pos
             pos = pos.next

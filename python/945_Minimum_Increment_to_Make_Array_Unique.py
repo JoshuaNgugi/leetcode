@@ -20,12 +20,12 @@ class Solution(object):
         holes = holes - len(num_set)
         # find a hole for these numbers
         for hole in range(left + 1, right):
-            if holes == 0 or len(duplicate) == 0:
+            if holes == 0 or not duplicate:
                 break
             if hole not in num_set and hole > duplicate[0]:
                 res += hole - duplicate.pop(0)
                 holes -= 1
-        while len(duplicate) != 0:
+        while duplicate:
             right += 1
             res += right - duplicate.pop(0)
         return res

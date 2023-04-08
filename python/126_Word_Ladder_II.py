@@ -75,10 +75,7 @@ class Solution(object):
             for c in string.ascii_lowercase:
                 for index in range(len(word)):
                     neigh = word[:index] + c + word[index + 1:]
-                    if not reverse:
-                        key, value = word, neigh
-                    else:
-                        key, value = neigh, word
+                    key, value = (neigh, word) if reverse else (word, neigh)
                     if neigh in backward:
                         hash_map[key] = hash_map.get(key, []) + [value]
                         is_connected = True

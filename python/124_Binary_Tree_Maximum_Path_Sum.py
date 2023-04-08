@@ -27,6 +27,4 @@ class Solution(object):
         self.result = max(lresult + rresult + node.val, self.result)
         ret = node.val + max(lresult, rresult)
         # if max left or right < 0 then return 0
-        if ret > 0:
-            return ret
-        return 0
+        return max(ret, 0)

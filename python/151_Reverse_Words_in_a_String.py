@@ -19,11 +19,8 @@ class Solution(object):
         last = ' '
         # remove multiple spaces
         for i in range(len(s)):
-            if s[i] != ' ':
+            if s[i] == ' ' and last != ' ' or s[i] != ' ':
                 array_s.append(s[i])
-            else:
-                if last != ' ':
-                    array_s.append(s[i])
             last = s[i]
         array_s = array_s[::-1]
         ls, pos = len(array_s), 0

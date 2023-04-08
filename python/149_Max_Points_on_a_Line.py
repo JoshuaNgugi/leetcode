@@ -33,15 +33,11 @@ class Solution(object):
                     else:
                         line_map[x][y] = 1
                 else:
-                    line_map[x] = {}
-                    line_map[x][y] = 1
+                    line_map[x] = {y: 1}
                 max_point = max(max_point, line_map[x][y])
             res = max(res, max_point + overlap + 1)
         return res
 
     def generateGCD(self, x, y):
-        if y == 0:
-            return x
-        else:
-            return self.generateGCD(y, x % y)
+        return x if y == 0 else self.generateGCD(y, x % y)
 

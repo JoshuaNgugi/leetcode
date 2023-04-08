@@ -9,10 +9,9 @@ class RandomizedSet(object):
     def insert(self, val):
         if val in self.num_to_idx:
             return False
-        else:
-            self.num_list.append(val)
-            self.num_to_idx[val] = len(self.num_list) - 1
-            return True
+        self.num_list.append(val)
+        self.num_to_idx[val] = len(self.num_list) - 1
+        return True
 
     def remove(self, val):
         if val not in self.num_to_idx:

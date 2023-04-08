@@ -18,9 +18,7 @@ class Solution(object):
         leaf2 = []
         self.dfs(root1, leaf1)
         self.dfs(root2, leaf2)
-        if leaf1 == leaf2:
-            return True
-        return False
+        return leaf1 == leaf2
 
     def dfs(self, node, leavels):
         if not node:

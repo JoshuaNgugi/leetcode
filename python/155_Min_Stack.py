@@ -89,15 +89,11 @@ class MinStack(object):
         """
         :rtype: int
         """
-        if len(self.stack) > 0:
-            return self.stack[-1]
-        return None
+        return self.stack[-1] if len(self.stack) > 0 else None
 
 
     def getMin(self):
         """
         :rtype: int
         """
-        if len(self.min_stack) > 0:
-            return self.min_stack[-1]
-        return None
+        return self.min_stack[-1] if len(self.min_stack) > 0 else None

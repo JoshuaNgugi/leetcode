@@ -31,7 +31,5 @@ class Solution:
             # end of loop we will get Flag that has a 0 or 1 value.
             canBe[bannedIdx] = Flag
 
-        if sum(canBe) > 0:
-            return True
-        return False
+        return sum(canBe) > 0
                 

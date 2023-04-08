@@ -12,8 +12,7 @@ class Solution(object):
         wordList.discard(beginWord)
         wordList.discard(endWord)
         hash_map, res = {}, []
-        res = self.bfs(set([beginWord]), set([endWord]), wordList, 2)
-        return res
+        return self.bfs({beginWord}, {endWord}, wordList, 2)
 
     def bfs(self, forward, backward, wordlist, level):
         if len(forward) == 0 or len(backward) == 0:

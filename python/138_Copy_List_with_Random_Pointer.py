@@ -57,10 +57,7 @@ class Solution(object):
                 p.next.random = p.random.next
             p = p.next.next
         p = head
-        if p is not None:
-            headCopy = p.next
-        else:
-            headCopy = None
+        headCopy = p.next if p is not None else None
         while p is not None:
             copy = p.next
             p.next = copy.next

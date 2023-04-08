@@ -21,7 +21,7 @@ class Solution(object):
         dp = [0] * 2
         dp[0] = k
         dp[1] = k * k
-        for i in range(2, n):
+        for _ in range(2, n):
             temp = dp[1]
             dp[1] = sum(dp) * (k - 1)
             dp[0] = temp

@@ -19,11 +19,8 @@ class Solution(object):
     
     def preorder(self, root, isLeft):
         if root is None:
-            if isLeft:
-                return "lnull"
-            else:
-                return "rnull"
-        return "#" + str(root.val) + " " + self.preorder(root.left, True) + " " + self.preorder(root.right, False)
+            return "lnull" if isLeft else "rnull"
+        return f"#{str(root.val)} {self.preorder(root.left, True)} {self.preorder(root.right, False)}"
 
     # def isSubtree(self, s, t):
     #     return self.traverse(s, t)

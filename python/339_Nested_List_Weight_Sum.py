@@ -32,10 +32,9 @@ class Solution(object):
         return self.depthSum_helper(nestedList, 1)
 
     def depthSum_helper(self, nestedList, depth):
-        res = 0
-        for l in nestedList:
-            if l.isInteger():
-                res += l.getInteger() * depth
-            else:
-                res += self.depthSum_helper(l.getList(), depth + 1)
-        return res
+        return sum(
+            l.getInteger() * depth
+            if l.isInteger()
+            else self.depthSum_helper(l.getList(), depth + 1)
+            for l in nestedList
+        )

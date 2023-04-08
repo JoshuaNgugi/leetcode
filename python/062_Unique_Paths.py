@@ -13,9 +13,9 @@ class Solution:
         for i in range(1, m):
             for j in range(1, n):
                 l = u = 0
-                if i-1 >= 0:
+                if i >= 1:
                     u = dmap[i-1][j]
-                if j-1>= 0:
+                if j >= 1:
                     l = dmap[i][j-1]
                 dmap[i][j] = l + u
         return dmap[m-1][n-1]

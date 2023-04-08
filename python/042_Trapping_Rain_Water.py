@@ -37,10 +37,9 @@ class Solution(object):
             return 0
         min_m = min(height[start], height[end])
         res = min_m * (end - start - 1)
-        step = 0
-        for index in range(start + 1, end):
-            if height[index] > 0:
-                step += height[index]
+        step = sum(
+            height[index] for index in range(start + 1, end) if height[index] > 0
+        )
         return res - step
 
     # def trap(self, height):

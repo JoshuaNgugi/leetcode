@@ -42,12 +42,9 @@ class Logger(object):
         :type message: str
         :rtype: bool
         """
-        while len(self.heap):
-            if self.heap[0][0] <= timestamp:
-                temp = heapq.heappop(self.heap)
-                self.cache.pop(temp[1])
-            else:
-                break
+        while len(self.heap) and not self.heap[0][0] > timestamp:
+            temp = heapq.heappop(self.heap)
+            self.cache.pop(temp[1])
         if timestamp < self.cache.get(message, 0):
             return False
         self.cache[message] = timestamp + 10
