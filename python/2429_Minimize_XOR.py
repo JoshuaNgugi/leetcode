@@ -6,17 +6,13 @@ class Solution:
         ones = num2.count("1")
         maxLen = max(lenNum1, lenNum2)
 
-        # ans list have elements same as the maxLen
-        ans = []
-        for _ in range(maxLen):
-            ans.append("0")
-
+        ans = ["0" for _ in range(maxLen)]
         # add "0" in front of the binary numbers to make indexing easier
         for _ in range(maxLen - lenNum1):
-            num1 = "0" + num1
+            num1 = f"0{num1}"
 
         for _ in range(maxLen - lenNum2):
-            num2 = "0" + num2
+            num2 = f"0{num2}"
 
         # now make "x XOR num1" minimal
         # fill the ans list from index "0"

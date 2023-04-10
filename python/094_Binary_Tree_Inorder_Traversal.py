@@ -63,7 +63,7 @@ class Solution(object):
             return []
         res = []
         stack = [root]
-        while len(stack) > 0:
+        while stack:
             curr = stack.pop()
             if not isinstance(curr, TreeNode):
                 res.append(curr)

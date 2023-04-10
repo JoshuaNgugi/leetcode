@@ -8,7 +8,4 @@ class Solution(object):
             return 0
         temp = s.split(' ')
         temp = [t for t in temp if len(t) > 0]
-        if len(temp) == 0:
-            return 0
-        else:
-            return len(temp[-1])
+        return len(temp[-1]) if temp else 0

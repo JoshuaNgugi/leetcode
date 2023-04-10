@@ -8,7 +8,7 @@ class Solution(object):
         count = 0
         for i in range(len(flowerbed)):
             curr = flowerbed[i]
-            if i - 1 >= 0:
+            if i >= 1:
                 curr += flowerbed[i - 1]
             if i + 1 < len(flowerbed):
                 curr += flowerbed[i + 1]

@@ -26,10 +26,11 @@ class Solution(object):
         if mid == 4:
             return used[mid]
         # adjacent cells on diagonal
-        if (index % 3 != last % 3) and (index / 3 != last / 3):
-            return True
-        # all other cells which are not adjacent
-        return used[mid]
+        return (
+            True
+            if (index % 3 != last % 3) and (index / 3 != last / 3)
+            else used[mid]
+        )
 
     def calc_patterns(self, used, last, length):
         if length == 0:

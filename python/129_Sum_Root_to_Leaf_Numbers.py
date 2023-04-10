@@ -16,7 +16,7 @@ class Solution(object):
         res = 0
         # bfs with queue
         queue = [(root, root.val)]
-        while len(queue) > 0:
+        while queue:
             curr, curr_value = queue.pop(0)
             if curr.left is None and curr.right is None:
                 res += curr_value

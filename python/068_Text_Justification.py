@@ -26,7 +26,7 @@ class Solution(object):
         # print res_list
         for index, curr in enumerate(res_list):
             text = ''
-            remain = sum([len(t) for t in curr])
+            remain = sum(len(t) for t in curr)
             if len(curr) == 1:
                 # single word
                 text = curr[0] + ' ' * (maxWidth - remain)

@@ -16,8 +16,5 @@ class Solution(object):
             else:
                 end -= 1
                 curr += gas[end] - cost[end]
-        if curr >= 0:
-            return end
-        else:
-            return -1
+        return end if curr >= 0 else -1
 

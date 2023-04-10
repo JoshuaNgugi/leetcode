@@ -9,12 +9,9 @@ class Solution(object):
             return
         pair = []
         for i in range(ls):
-            for j in range(i + 1, ls):
-                # append ascending order pair
-                if nums[i] < nums[j]:
-                    pair.append([i,j])
+            pair.extend([i,j] for j in range(i + 1, ls) if nums[i] < nums[j])
         pos = 0
-        if len(pair) > 0:
+        if pair:
             self.swap(nums, pair[-1][0], pair[-1][1])
             pos = pair[-1][0] + 1
         # sort from pos

@@ -30,8 +30,5 @@ class Solution(object):
                 for k in range(i + 1, j):
                     localMax = k + max(dp[i][k - 1], dp[k + 1][j])
                     globalMin = min(globalMin, localMax)
-                if i + 1 == j:
-                    dp[i][j] = i
-                else:
-                    dp[i][j] = globalMin
+                dp[i][j] = i if i + 1 == j else globalMin
         return dp[1][n]

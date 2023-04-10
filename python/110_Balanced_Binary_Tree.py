@@ -12,11 +12,7 @@ class Solution(object):
         :rtype: bool
         """
         # Bottom-up recursion with sentinel -1
-        if root is None:
-            return True
-        if self.getDepth(root) < 0:
-            return False
-        return True
+        return True if root is None else self.getDepth(root) >= 0
     
     def getDepth(self, node):
         if node is None:
@@ -25,12 +21,7 @@ class Solution(object):
         if ld < 0:
             return -1
         rd = self.getDepth(node.right)
-        if rd < 0:
-            return -1
-        elif abs(ld - rd) > 1:
-            return -1
-        else:
-            return max(ld, rd) + 1
+        return -1 if rd < 0 or abs(ld - rd) > 1 else max(ld, rd) + 1
     
 
     # https://discuss.leetcode.com/topic/7798/the-bottom-up-o-n-solution-would-be-better

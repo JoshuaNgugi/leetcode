@@ -9,7 +9,4 @@ class Solution(object):
         if ls <= 1:
             return True
         mid = ls / 2
-        for i in range(mid):
-            if alnum_s[i] != alnum_s[ls - 1 - i]:
-                return False
-        return True
+        return all(alnum_s[i] == alnum_s[ls - 1 - i] for i in range(mid))

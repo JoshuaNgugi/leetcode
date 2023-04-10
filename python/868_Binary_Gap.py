@@ -18,7 +18,7 @@ class Solution:
                     out = max(out, current - last1)
                 last1 = current
             current += 1
-            n = n // 2
+            n //= 2
         return out
     
     # def binaryGap(self, n: int) -> int:

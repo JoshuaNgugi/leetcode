@@ -40,10 +40,7 @@ class Solution(object):
         """
         timeline = []
         for interval in intervals:
-            # meeting root + 1
-            timeline.append((interval.start, 1))
-            # meeting root - 1
-            timeline.append((interval.end, -1))
+            timeline.extend(((interval.start, 1), (interval.end, -1)))
         # sort by time
         timeline.sort()
         ans = curr = 0

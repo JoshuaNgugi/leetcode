@@ -8,7 +8,7 @@ class Solution(object):
         if n == 0:
             return 0
         res = []
-        board = [['.'] * n for t in range(n)]
+        board = [['.'] * n for _ in range(n)]
         self.do_solveNQueens(res, board, n)
         return res
 

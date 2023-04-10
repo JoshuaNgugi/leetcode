@@ -43,15 +43,11 @@ class Solution(object):
     def collectRows(self, grid):
         rows = []
         for i in range(len(grid)):
-            for j in range(len(grid[0])):
-                if grid[i][j] == 1:
-                    rows.append(i)
+            rows.extend(i for j in range(len(grid[0])) if grid[i][j] == 1)
         return rows
 
     def collectCols(self, grid):
         cols = []
         for j in range(len(grid[0])):
-            for i in range(len(grid)):
-                if grid[i][j] == 1:
-                    cols.append(j)
+            cols.extend(j for i in range(len(grid)) if grid[i][j] == 1)
         return cols

@@ -7,9 +7,7 @@ class Solution(object):
         #https://leetcode.com/discuss/84831/java-backtracking-stack-20ms
         empty = []
         for i in range(9):
-            for j in range(9):
-                if board[i][j] == '.':
-                    empty.append(9 * i + j)
+            empty.extend(9 * i + j for j in range(9) if board[i][j] == '.')
         self.solve(board, empty)
 
     def solve(self, board, empty):

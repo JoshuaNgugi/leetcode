@@ -34,10 +34,7 @@ class MyHashMap(object):
         if self.nodes[index] is None:
             return -1
         prev = find(self.nodes[index], key)
-        if prev.next is None:
-            return -1
-        else:
-            return prev.next.val
+        return -1 if prev.next is None else prev.next.val
 
     def remove(self, key):
         """

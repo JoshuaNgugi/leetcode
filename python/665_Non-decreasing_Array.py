@@ -29,7 +29,7 @@ class Solution(object):
                 broken_num += 1
                 if broken_num >= 2:
                     return False
-                if (i - 1 < 0 or nums[i - 1] <= nums[i + 1]):
+                if i < 1 or nums[i - 1] <= nums[i + 1]:
                     # Remove i
                     nums[i] = nums[i + 1]
                 else:

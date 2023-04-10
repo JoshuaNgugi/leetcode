@@ -27,7 +27,7 @@ class Solution(object):
             return 0
         queue = [root]
         depth, rightMost = 1, root
-        while len(queue) > 0:
+        while queue:
             node = queue.pop(0)
             if node.left is None and node.right is None:
                 break
@@ -38,9 +38,6 @@ class Solution(object):
             if node == rightMost:
                 # reach the current level end
                 depth += 1
-                if node.right is not None:
-                    rightMost = node.right
-                else:
-                    rightMost = node.left
+                rightMost = node.right if node.right is not None else node.left
         return depth
 

@@ -14,11 +14,7 @@ class Solution(object):
         """
         if len(words) == 0:
             return 0
-        ans_set = set()
-        for word in words:
-            morsed = ""
-            for c in word:
-                morsed += Morse_tab[ord(c) - ord('a')]
-            
-            ans_set.add(morsed)
+        ans_set = {
+            "".join(Morse_tab[ord(c) - ord('a')] for c in word) for word in words
+        }
         return len(ans_set)

@@ -11,7 +11,7 @@ class Solution(object):
         if ls <= 1 or len(set(s)) == 1:
             return s
         # create a new list like this: "abc"->"a#b#c"
-        temp_s = '#'.join('{}'.format(s))
+        temp_s = '#'.join(f'{s}')
         # print temp_s
         tls = len(temp_s)
         seed = range(1, tls - 1)

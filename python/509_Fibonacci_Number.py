@@ -1,9 +1,7 @@
 class Solution(object):
 
     def __init__(self):
-        self.memo = []
-        self.memo.append(0)
-        self.memo.append(1)
+        self.memo = [0, 1]
 
     def fib(self, N):
         """

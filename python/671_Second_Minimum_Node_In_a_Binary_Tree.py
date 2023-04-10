@@ -40,6 +40,5 @@ class Solution(object):
             if min_val < curr.val < ans:
                 ans = curr.val
             elif curr.val == min_val:
-                stack.append(curr.left)
-                stack.append(curr.right)
+                stack.extend((curr.left, curr.right))
         return ans if ans < float('inf') else -1

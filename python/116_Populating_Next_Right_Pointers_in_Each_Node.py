@@ -15,7 +15,7 @@ class Solution(object):
         if root is None:
             return
         nodes = [root]
-        while len(nodes) != 0:
+        while nodes:
             next_step = []
             last = None
             for node in nodes:
