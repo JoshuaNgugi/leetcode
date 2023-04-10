@@ -13,8 +13,4 @@ class Solution(object):
                 continue
             for j in xrange(i * i, n, i):
                 isPrime[j] = False
-        count = 0
-        for i in xrange(2, n):
-            if isPrime[i]:
-                count += 1
-        return count
+        return sum(bool(isPrime[i]) for i in xrange(2, n))

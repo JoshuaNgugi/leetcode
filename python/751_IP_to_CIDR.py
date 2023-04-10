@@ -17,7 +17,7 @@ class Solution(object):
             # Last 1 of start or can start from 0
             mask = max(33 - (start & -start).bit_length(),
                        33 - n.bit_length())
-            ans.append(self.intToIP(start) + '/' + str(mask))
+            ans.append(f'{self.intToIP(start)}/{str(mask)}')
             start += 1 << (32 - mask)
             n -= 1 << (32 - mask)
         return ans

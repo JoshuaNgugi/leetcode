@@ -33,7 +33,7 @@ class Solution(object):
         # use stack
         stack = [[root]]
         res = []
-        while len(stack) > 0:
+        while stack:
             top = stack.pop()
             res.insert(0, [t.val for t in top])
             temp = []
@@ -42,6 +42,6 @@ class Solution(object):
                     temp.append(node.left)
                 if node.right is not None:
                     temp.append(node.right)
-            if len(temp) > 0:
+            if temp:
                 stack.append(temp)
         return res

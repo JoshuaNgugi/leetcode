@@ -26,8 +26,7 @@ class Solution(object):
         for i in range(1, len(nums)):
             if nums[left] == nums[i]:
                 continue
-            else:
-                left += 1
-                nums[left] = nums[i]
+            left += 1
+            nums[left] = nums[i]
         return left + 1
 

@@ -75,10 +75,7 @@ class Solution(object):
             for c in string.ascii_lowercase:
                 for index in range(len(word)):
                     neigh = word[:index] + c + word[index + 1:]
-                    if not reverse:
-                        key, value = word, neigh
-                    else:
-                        key, value = neigh, word
+                    key, value = (neigh, word) if reverse else (word, neigh)
                     if neigh in backward:
                         hash_map[key] = hash_map.get(key, []) + [value]
                         is_connected = True
@@ -108,5 +105,11 @@ if __name__ == "__main__":
     # print s.findLadders('a', 'b', set(['a', 'b', 'c']))
     # print s.findLadders('hot', 'dog', set(['hot', 'dog']))
     # print s.findLadders("qa", "sq", set(["si","go","se","cm","so","ph","mt","db","mb","sb","kr","ln","tm","le","av","sm","ar","ci","ca","br","ti","ba","to","ra","fa","yo","ow","sn","ya","cr","po","fe","ho","ma","re","or","rn","au","ur","rh","sr","tc","lt","lo","as","fr","nb","yb","if","pb","ge","th","pm","rb","sh","co","ga","li","ha","hz","no","bi","di","hi","qa","pi","os","uh","wm","an","me","mo","na","la","st","er","sc","ne","mn","mi","am","ex","pt","io","be","fm","ta","tb","ni","mr","pa","he","lr","sq","ye"]))
-    print(s.findLadders("hot", "dog", set(["hot","cog","dog","tot","hog","hop","pot","dot"])))
+    print(
+        s.findLadders(
+            "hot",
+            "dog",
+            {"hot", "cog", "dog", "tot", "hog", "hop", "pot", "dot"},
+        )
+    )
 

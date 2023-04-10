@@ -23,10 +23,8 @@ class Solution(object):
             if p in visited:
                 continue
             visited.add(p)
-            if p[0] < len(s1):
-                if s1[p[0]] == s3[index]:
-                    queue.append((p[0] + 1, p[1]))
-            if p[1] < len(s2):
-                if s2[p[1]] == s3[index]:
-                    queue.append((p[0], p[1] + 1))
+            if p[0] < len(s1) and s1[p[0]] == s3[index]:
+                queue.append((p[0] + 1, p[1]))
+            if p[1] < len(s2) and s2[p[1]] == s3[index]:
+                queue.append((p[0], p[1] + 1))
         return False

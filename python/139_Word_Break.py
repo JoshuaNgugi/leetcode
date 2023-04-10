@@ -7,8 +7,8 @@ class Solution(object):
         """
         queue = [0]
         ls = len(s)
-        lenList = [l for l in set(map(len, wordDict))]
-        visited = [0 for _ in range(0, ls + 1)]
+        lenList = list(set(map(len, wordDict)))
+        visited = [0 for _ in range(ls + 1)]
         while queue:
             start = queue.pop(0)
             for l in lenList:

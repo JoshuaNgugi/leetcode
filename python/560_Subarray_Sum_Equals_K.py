@@ -5,8 +5,7 @@ class Solution(object):
         :type k: int
         :rtype: int
         """
-        sum_map = {}
-        sum_map[0] = 1
+        sum_map = {0: 1}
         count = curr_sum = 0
         for num in nums:
             curr_sum += num

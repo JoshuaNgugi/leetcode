@@ -32,7 +32,7 @@ class Solution(object):
             return []
         res = []
         stack = [root]
-        while len(stack) > 0:
+        while stack:
             curr = stack.pop()
             res.append(curr.val)
             if curr.right is not None:

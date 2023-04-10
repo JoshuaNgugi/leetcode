@@ -40,10 +40,10 @@ class Solution(object):
         # https://leetcode.com/articles/3sum-smaller/#approach-2-binary-search-accepted
         nums.sort()
         ls = len(nums)
-        res = 0
-        for i in range(ls - 1):
-            res += self.twoSumSmaller(nums, i + 1, target - nums[i])
-        return res
+        return sum(
+            self.twoSumSmaller(nums, i + 1, target - nums[i])
+            for i in range(ls - 1)
+        )
 
     def twoSumSmaller(self, nums, start, target):
         res, left, right = 0, start, len(nums) - 1

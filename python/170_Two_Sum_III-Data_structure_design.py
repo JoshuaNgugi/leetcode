@@ -26,12 +26,10 @@ class TwoSum(object):
         :type value: int
         :rtype: bool
         """
-        for v in self.internal:
-            if value - v in self.dic:
-                if v << 1 == value and not self.dic[v]:
-                    continue
-                return True
-        return False
+        return any(
+            value - v in self.dic and (v << 1 != value or self.dic[v])
+            for v in self.internal
+        )
 
 
 # Your TwoSum object will be instantiated and called as such:

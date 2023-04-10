@@ -31,13 +31,12 @@ class Solution(object):
         return intervals
 
     def check_overlap(self, curr_int, new_int):
-        if curr_int.start <= new_int.start: 
-           if curr_int.end > new_int.start:
-               return True
-        else:
-            if curr_int.start <= new_int.end:
-                return True
-        return False
+        return (
+            curr_int.start <= new_int.start
+            and curr_int.end > new_int.start
+            or curr_int.start > new_int.start
+            and curr_int.start <= new_int.end
+        )
 
     def merge_intervals(self, int1, int2):
         temp_int = Interval()

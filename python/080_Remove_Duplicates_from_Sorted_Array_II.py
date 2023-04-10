@@ -11,13 +11,11 @@ class Solution:
         i = j = 0
         while i < length:
             j = i
-            while j < length:
-                if nums[j] != nums[i]:
-                    break
+            while j < length and nums[j] == nums[i]:
                 j += 1
             if j-i > 2:
                 length -= j-i-2
-                for k in range(j-i-2):
+                for _ in range(j-i-2):
                     del nums[i]
                 result += 2
                 j = i+2

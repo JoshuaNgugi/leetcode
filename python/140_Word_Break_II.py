@@ -21,6 +21,6 @@ class Solution(object):
             if word in wordDict:
                 rem = s[:i]
                 prev = self.wordBreak(rem, wordDict)
-                result.extend([res + ' ' + word for res in prev])
+                result.extend([f'{res} {word}' for res in prev])
         self.solution[s] = result
         return result

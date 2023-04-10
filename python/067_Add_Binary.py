@@ -56,5 +56,5 @@ class Solution(object):
             curr //= 2
             pos -= 1
         if curr == 1:
-            res = '1' + res
+            res = f'1{res}'
         return res

@@ -30,6 +30,4 @@ class Solution(object):
             while place_stop is not None:
                 place_stop.val = 0
                 place_stop = place_stop.next
-        if dummy.val == 0:
-            return dummy.next
-        return dummy
+        return dummy.next if dummy.val == 0 else dummy

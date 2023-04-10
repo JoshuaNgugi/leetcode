@@ -11,10 +11,12 @@ class Solution(object):
         last_list = self.generateParenthesis(n - 1)
         res = []
         for t in last_list:
-            curr = t + ')'
-            for index in range(len(curr)):
-                if curr[index] == ')':
-                    res.append(curr[:index] + '(' + curr[index:])
+            curr = f'{t})'
+            res.extend(
+                f'{curr[:index]}({curr[index:]}'
+                for index in range(len(curr))
+                if curr[index] == ')'
+            )
         return list(set(res))
 
 

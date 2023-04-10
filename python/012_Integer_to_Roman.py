@@ -35,7 +35,7 @@ class Solution(object):
         i = 0
         while num > 0:
             k = num // values[i]
-            for j in range(k):
+            for _ in range(k):
                 roman += symbols[i]
                 num -= values[i]
             i += 1

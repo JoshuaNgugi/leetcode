@@ -25,8 +25,9 @@ class Solution(object):
         # remain k value
         k %= curr
         curr /= n
-        res = [remain[step]] + self.do_getPermutation(remain[:step] + remain[step + 1:], curr, n - 1, k)
-        return res
+        return [remain[step]] + self.do_getPermutation(
+            remain[:step] + remain[step + 1 :], curr, n - 1, k
+        )
 
 if __name__ == '__main__':
     s = Solution()

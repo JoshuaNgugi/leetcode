@@ -22,6 +22,5 @@ class Solution(object):
         # right side
         right_res = self.pathSum(root.right, sum - root.val)
         # add current prefix
-        for t in left_res + right_res:
-            res.append([root.val] + t)
+        res.extend([root.val] + t for t in left_res + right_res)
         return res

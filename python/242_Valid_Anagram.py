@@ -22,7 +22,4 @@ class Solution(object):
         for i in range(len(s)):
             counter[ord(s[i]) - ord('a')] += 1
             counter[ord(t[i]) - ord('a')] -= 1
-        for num in counter:
-            if num != 0:
-                return False
-        return True
+        return all(num == 0 for num in counter)

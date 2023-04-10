@@ -13,8 +13,7 @@ class Solution:
             return []
         paths = []
         self.get_path(paths, [], root)
-        res = ['->'.join(p) for p in paths ]
-        return res
+        return ['->'.join(p) for p in paths ]
 
     def get_path(self, result, path, node):
         if node.left is None and node.right is None:
